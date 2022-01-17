@@ -7,6 +7,8 @@ const app = express()
 
 let port = process.env.PORT || 3000
 
+let version = "v1.0.0"
+
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, "Static")))
 app.use(bodyParser.json())
@@ -19,5 +21,5 @@ app.get("/", (req, res) => {
 
 
 app.listen(port, ()=> {
-    console.log("App started" + " || " + MyZipVersion)
+    console.log("App started" + " || " + version)
 })
